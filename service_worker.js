@@ -506,7 +506,7 @@ function setUpRedirectListener() {
 
 		log('Setting filter for listener: ' + JSON.stringify(filter));
 		//chrome.webRequest.onBeforeRequest.addListener(checkRedirects, filter, ["blocking"]);
-		chrome.webRequest.onBeforeRequest.addListener(checkRedirects, filter, []);
+		chrome.webRequest.onBeforeRequest.addListener(checkRedirects, filter);
 
 		if (partitionedRedirects.history) {
 			log('Adding HistoryState Listener');
